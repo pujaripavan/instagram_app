@@ -1,0 +1,12 @@
+# app/views/posts/new.html.erb
+
+# app/views/posts/new.html.erb
+
+<h1>Add new image</h1>
+
+<%= simple_form_for Post.new, url: posts_path, html: { multipart: true } do |f| %>
+  <%= f.input :image, as: :file %>
+  <%= f.input :title %>
+  <%= f.button :submit %>
+<% end %>
+
